@@ -1,0 +1,132 @@
+// Font Variables
+$root-font: 10px;
+$default-font: 1.6rem;
+$font-size: 1.8rem;
+
+$font-family: "Kumbh Sans", sans-serif;
+
+// Grid Variables
+$grid: 114rem;
+
+// Color Variables
+$primary-dark-cyan: hsl(185, 75%, 39%);
+$primary-dark-blue: hsl(229, 23%, 23%);
+$primary-dark-grayish-blue: hsl(227, 10%, 46%);
+$primary-dark-gray: hsl(0, 0%, 59%);
+
+$neutral-white: hsl(0, 0%, 100%);
+
+// Mixin
+
+@mixin d-flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-font;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  background-color: $primary-dark-cyan;
+  color: $primary-dark-blue;
+  background-size: 100%;
+  background-position: top;
+  height: 100vh;
+  padding: 1.6rem;
+
+  // @include d-flex(center, center);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card {
+  width: 35rem;
+  // max-width: 35rem;
+  background-color: $neutral-white;
+  border-radius: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  @media only screen and (max-width: 400px) {
+    width: 30rem;
+  }
+
+  &__header {
+    background-image: url("./images/bg-pattern-card.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.4rem;
+    position: relative;
+    height: 14rem;
+  }
+
+  &__avatar {
+    width: 12rem;
+    height: 12rem;
+    border: 3px solid $neutral-white;
+    border-radius: 10rem;
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  &__info {
+    padding: 12vh 0 2.4rem;
+
+    @include d-flex(center, center);
+    flex-direction: column;
+    gap: 0.4rem;
+    border-bottom: 1.5px solid rgba($primary-dark-gray, 0.7);
+  }
+
+  &__title {
+    font-weight: 700;
+
+    &--sub {
+      color: $primary-dark-grayish-blue;
+    }
+  }
+
+  &__location {
+    font-weight: 400;
+  }
+
+  &__stats {
+    @include d-flex(space-around, center);
+    padding: 2.4rem;
+
+    h4 {
+      font-size: $default-font * 1.62;
+      line-height: 2.8rem;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 1.3rem;
+      color: $primary-dark-gray;
+    }
+  }
+
+  &__followers,
+  &__like,
+  &__photos {
+    @include d-flex(center, center);
+    flex-direction: column;
+  }
+}

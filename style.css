@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.8rem;
+  background-color: hsl(185, 75%, 39%);
+  background-size: 100%;
+  background-position: top;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+hr {
+  color: hsl(0, 0%, 91%);
+}
+
+.background__pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.top {
+  top: 50%;
+  left: 15%;
+}
+
+.bottom {
+  bottom: -80%;
+  right: 15%;
+  z-index: -1;
+}
+
+/* main::before {
+    content: url(./images/bg-pattern-top.svg);
+    background: url(./images/bg-pattern-top.svg);
+    position:absolute;
+    top:0px;
+    left:0px;
+} */
+
+/* ------------------------------------------------------------
+-------------------PROFILE CARD COMPONENT----------------------
+--------------------------------------------------------------- */
+
+.profile__card {
+  width: fit-content;
+  background-color: white;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
+.bg-pattern-card {
+   width: auto;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.account__details {
+  margin-top: 6.5rem;
+  text-align: center;
+}
+
+.user-details {
+  margin-bottom: 2.4rem;
+}
+
+.username {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+  margin-bottom: 0.5rem;
+}
+
+.bio,
+.numeric-modifier {
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
+
+img.victor-crest {
+  width: 9rem;
+  border-radius: 10rem;
+  border: 5px solid white;
+  position: absolute;
+  top: 35.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile__card--account-stats {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: center;
+  padding: 1.8rem 1.8rem 2.2rem;
+}
+
+.account-stats {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+
+.aside {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 0%, 59%);
+}
